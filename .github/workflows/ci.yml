@@ -1,1 +1,19 @@
+name: CI Basique
 
+on: [push]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Get code
+        uses: actions/checkout@v4
+      
+      - name: 📁 List files
+        run: ls -la
+      
+      - name: 🐳 Build Docker
+        run: |
+          docker build -t app-ci .
+          docker images
