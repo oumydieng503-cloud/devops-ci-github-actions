@@ -9,7 +9,7 @@ jobs:
   docker:
     runs-on: ubuntu-latest
 
-    #environment: dev
+    #environment: 
 
     env:
       IMAGE_NAME: nom_iame_docker
@@ -20,7 +20,7 @@ jobs:
       - name: Récupération du code
         uses: actions/checkout@v4
       
-      - name: Test Variable
+      - name: Test Variables
         run: |
           echo "Variable MYVAR  ${{ vars.MYVAR }} "
           echo "Variable IMAGE_NAME $IMAGE_NAME"
