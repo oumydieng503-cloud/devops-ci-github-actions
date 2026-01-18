@@ -20,7 +20,7 @@ jobs:
       - name: Récupération du code
         uses: actions/checkout@v4
       
-      - name: Test Variables
+      - name: Test Variable
         run: |
           echo "Variable MYVAR  ${{ vars.MYVAR }} "
           echo "Variable IMAGE_NAME $IMAGE_NAME"
