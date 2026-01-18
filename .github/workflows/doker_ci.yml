@@ -20,15 +20,15 @@ jobs:
       - name: Récupération du code
         uses: actions/checkout@v4
       
-      - name: Test Varibales
+      - name: Test Variables
         run: |
-          echo "Varibale MYVAR  ${{ vars.MYVAR }} "
-          echo "Varibale IMAGE_NAME $IMAGE_NAME"
-          echo "Varibale DOCKER_HUB_REGISTRY  $DOCKER_HUB_REGISTRY "
+          echo "Variable MYVAR  ${{ vars.MYVAR }} "
+          echo "Variable IMAGE_NAME $IMAGE_NAME"
+          echo "Variable DOCKER_HUB_REGISTRY  $DOCKER_HUB_REGISTRY "
 
       - name: Connexion à Docker Hub
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login \
-             -u "${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+             -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
       - name: Build de l’image Docker
         run: |
