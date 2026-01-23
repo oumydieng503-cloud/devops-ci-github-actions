@@ -14,7 +14,7 @@ jobs:
     env:
       IMAGE_NAME: oumydieng
       IMAGE_TAG: 1.0.0
-      DOCKER_HUB_REGISTRY: docker.io/mon_nom_utilisateur
+      DOCKER_HUB_REGISTRY: docker.io/oumydieng
 
     steps:
       - name: Récupération du code
